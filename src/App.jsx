@@ -1,9 +1,11 @@
 // App.js
+import './App.css'; // Import your CSS file for styling
 import React, { useState } from 'react';
-import Profile from './Profile';
-import Search from './Search';
-import Project from './Project';
-import Mentorship from './Mentorship';
+import Profile from '../src/components/profile/profile';
+import Search from '../src/components/search/search'
+import Project from '../src/components/project/project';
+import Mentorship from '../src/components/mentorship/mentorship';
+// import login from "../src/components/login/login.jsx";
 
 const App = () => {
   const [selectedUser, setSelectedUser] = useState(null);
@@ -25,6 +27,7 @@ const App = () => {
 
   return (
     <div className="app-container">
+      <login />
       <h1>Welcome to SkillSync</h1>
 
       <Search users={users} onSelectUser={setSelectedUser} />
