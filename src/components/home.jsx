@@ -41,8 +41,8 @@ const HomePage = () => {
 
       {/* Footer */}
       <footer className="footer" id="contact">
-        <p className="footer-text">Contact us at <a href="mailto:contact@mybrand.com">contact@mybrand.com</a></p>
-        <p className="footer-text">&copy; 2025 MyBrand. All rights reserved.</p>
+        <p className="footer-text">Contact us at <a href="admin@gmail.com">contact@mybrand.com</a></p>
+        <p className="footer-text">&copy; 2025 Skill Sync. All rights reserved.</p>
       </footer>
     </div>
   );
