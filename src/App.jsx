@@ -1,18 +1,23 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import Login from './components/Login';
-// import Dashboard from './pages/Dashboard';
-import Home from './components/Home/home'; // Capitalize 'Home' for consistency with React component naming
+import Register from './components/Register';
+import Logout from './components/Logout';
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} /> {/* Home is the default route */}
-        {/* <Route path="/dashboard" element={<Dashboard />} /> */}
-        {/* <Route path="/login" element={<Login />} /> Add a login route for completeness */}
+        <Route path="/" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+              <Logout />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </Router>
   );
 }
-
-export default App;
