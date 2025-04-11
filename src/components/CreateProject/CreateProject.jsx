@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './ProjectForm.css';
+import './CreateProject.css';
 
 const ProjectForm = () => {
   const [formData, setFormData] = useState({

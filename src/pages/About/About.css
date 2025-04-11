@@ -1,0 +1,62 @@
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background: #f5f9ff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .about-card {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 16px;
+    max-width: 900px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+  
+  .about-card h1 {
+    font-size: 2.8rem;
+    color: #1a237e;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .mission {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 40px;
+    text-align: center;
+    line-height: 1.6;
+  }
+  
+  .core-values h2,
+  .vision-section h2 {
+    font-size: 1.6rem;
+    color: #0d47a1;
+    margin-bottom: 10px;
+  }
+  
+  .core-values ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+  }
+  
+  .core-values li {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  .core-values li strong {
+    color: #1565c0;
+  }
+  
+  .vision-section p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+  }
