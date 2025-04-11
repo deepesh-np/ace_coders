@@ -1,6 +1,7 @@
 import React from 'react';
 import './Dashboard.css';
-
+import Logout from '../Logout/Logout.jsx';
+<Logout />
 const Dashboard = () => {
   return (
     <div className="dashboard-container">
