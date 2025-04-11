@@ -1,6 +1,14 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import api from '../api/api';
+
+const handleLogin = async () => {
+  const res = await api.post('token/', { username, password });
+  localStorage.setItem('access', res.data.access);
+  localStorage.setItem('refresh', res.data.refresh);
+  navigate('/dashboard');
+};
 
 const Login = () => {
   const [form, setForm] = useState({ username: '', password: '' });

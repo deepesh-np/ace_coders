@@ -1,12 +1,13 @@
-import Register from './components/Register';
-import Logout from './components/Logout';
-import ProtectedRoute from './components/ProtectedRoute';
+import Register from './components/Register/Register.js';
+import Logout from './components/Logout/Logout.js';
+import ProtectedRoute from './components/ProtectedRoute.js';
+import HomePage from '../src/components/Home/home';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/register" element={<Register />} />
         <Route
           path="/dashboard"
