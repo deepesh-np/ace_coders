@@ -1,9 +1,9 @@
 // App.js
 import React, { useState } from 'react';
-import Profile from './Profile';
-import Search from './Search';
-import Project from './Project';
-import Mentorship from './Mentorship';
+import Profile from '../src/components/profile/profile';
+import Search from '../src/components/search/search'
+import Project from '../src/components/project/project';
+import Mentorship from '../src/components/mentorship/mentorship';
 
 const App = () => {
   const [selectedUser, setSelectedUser] = useState(null);
