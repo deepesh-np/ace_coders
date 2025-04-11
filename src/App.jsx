@@ -9,8 +9,8 @@ import ContactUs from './pages/contact/contact.jsx';
 import mentorship from './components/mentorship/mentorship.jsx';
 // import ProtectedRoute from './components/ProtectedRoute.jsx';
 import HomePage from '../src/components/Home/home.jsx';
-import createproject from './components/CreateProject/CreateProject.jsx'
-import about from './pages/About/About.jsx'
+import Createproject from './components/CreateProject/CreateProject.jsx'
+import About from './pages/About/About.jsx'
 
 function App() {
   return (
@@ -22,8 +22,8 @@ function App() {
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/register" element={<Register />} />
         <Route path="/mentorship" element={<mentorship />} />
-        <Route path="/createproject" element={<createproject />} />
-        <Route path="/about" element={<about />} />
+        <Route path="/createproject" element={<Createproject />} />
+        <Route path="/about" element={<About />} />
          
         <Route
           path="/dashboard"
