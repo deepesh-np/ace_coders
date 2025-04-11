@@ -1,19 +1,24 @@
-import Register from './components/Register/Register.js';
-import Logout from './components/Logout/Logout.js';
-import ProtectedRoute from './components/ProtectedRoute.js';
-import HomePage from '../src/components/Home/home';
+import Register from './components/Register/Register.jsx';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import Dashboard from './components/Dashboard/Dashboard.jsx';
+import './App.css';
+import Logout from './components/Logout/Logout.jsx';
+import Login from './components/Login/login.jsx';
+
+import ProtectedRoute from './components/ProtectedRoute.jsx';
+// import HomePage from '../src/components/Home/home';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/" element={<Register />} />
+        <Route path="/Login" element={<Login />} />
         <Route
           path="/dashboard"
           element={
             <ProtectedRoute>
-              <Dashboard />
+              {/* <Dashboard /> */}
               <Logout />
             </ProtectedRoute>
           }
@@ -22,3 +27,4 @@ function App() {
     </Router>
   );
 }
+export default App;
