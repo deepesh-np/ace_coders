@@ -33,7 +33,7 @@ const ProjectList = () => {
         {projects.map((project) => (
           <div className="project-card" key={project.id}>
             <h3>{project.title}</h3>
-            <p className="creator">Created by: {project.creator}</p>
+            <p className="creator">Created_by: {project.creator}</p>
             <p>{project.description}</p>
             <div className="tech-tags">
               {project.technologies.map((tech, idx) => (
