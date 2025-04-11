@@ -1,44 +1,18 @@
-// App.js
-import './App.css'; // Import your CSS file for styling
-import React, { useState } from 'react';
-import Profile from '../src/components/profile/profile';
-import Search from '../src/components/search/search'
-import Project from '../src/components/project/project';
-import Mentorship from '../src/components/mentorship/mentorship';
-// import login from "../src/components/login/login.jsx";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import Login from './components/Login';
+// import Dashboard from './pages/Dashboard';
+import Home from './components/home'; // Capitalize 'Home' for consistency with React component naming
 
-const App = () => {
-  const [selectedUser, setSelectedUser] = useState(null);
-  const [projects, setProjects] = useState([]);
-  const [mentors, setMentors] = useState([]);
-  const users = [
-    // Sample user data
-    { id: 1, name: 'John Doe', role: 'Mentor', skills: ['JavaScript', 'React'], interests: 'Web Development', pastProjects: [{ name: 'React App', link: 'https://github.com' }] },
-    { id: 2, name: 'Jane Smith', role: 'Mentee', skills: ['JavaScript'], interests: 'Learning React', pastProjects: [] }
-  ];
-
-  const handleCreateProject = (project) => {
-    setProjects([...projects, project]);
-  };
-
-  const handleRequestMentorship = (mentor) => {
-    alert(`Mentorship requested from ${mentor.name}`);
-  };
-
+function App() {
   return (
-    <div className="app-container">
-      <login />
-      <h1>Welcome to SkillSync</h1>
-
-      <Search users={users} onSelectUser={setSelectedUser} />
-      
-      {selectedUser && <Profile user={selectedUser} />}
-
-      <Project onCreateProject={handleCreateProject} />
-
-      <Mentorship mentors={users.filter(user => user.role === 'Mentor')} onRequestMentorship={handleRequestMentorship} />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} /> {/* Home is the default route */}
+        {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+        {/* <Route path="/login" element={<Login />} /> Add a login route for completeness */}
+      </Routes>
+    </Router>
   );
-};
+}
 
 export default App;
