@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import Login from './components/Login';
 // import Dashboard from './pages/Dashboard';
-import Home from './components/home'; // Capitalize 'Home' for consistency with React component naming
+import Home from './components/Home/home'; // Capitalize 'Home' for consistency with React component naming
 
 function App() {
   return (

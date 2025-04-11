@@ -1,5 +1,7 @@
-import Profile from '../components/Profile';
-import ProjectList from '../components/ProjectList';
+import Profile from '../Profile/Profile';
+import React from 'react';
+import './Dashboard.css';
+import ProjectList from '../ProjectList/ProjectList';
 
 const Dashboard = () => {
   return (
